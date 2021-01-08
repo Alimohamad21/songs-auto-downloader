@@ -6,7 +6,7 @@ from selenium import webdriver
 
 def close_tab(n):
     while True:
-        if len(driver.window_handles) == n:
+        if len(driver.window_handles) == n:  # to close ads
             driver.switch_to.window(driver.window_handles[-1])
             driver.close()
             driver.switch_to.window(driver.window_handles[n - 2])
